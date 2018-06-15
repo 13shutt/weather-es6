@@ -1,3 +1,8 @@
+p, span {
+  padding: 0;
+  margin: 0;
+}
+
 nav > div {
   margin-top: 12px;
 }
@@ -34,8 +39,10 @@ header > * {
   align-items: center;
   background-color: #fff;
   height: 60px;
-  width: 160px;
+  min-width: 160px;
   border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .current-city * {
@@ -52,9 +59,59 @@ header > * {
   justify-content: center;
 }
 
-.current-data * {
+.current-data p {
   margin-right: 25px;
   margin-left: 25px;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: row;
+}
+
+.daily-weather {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.weekly-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #B0BEC5;
+}
+
+.wi {
+  font-size: 50px;
+  color: mediumslateblue;
+}
+
+.cards {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.ww-text {
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 150px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .onoffswitch {

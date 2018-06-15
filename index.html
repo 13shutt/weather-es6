@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>WeatherAPP</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
   <link rel="stylesheet" href="style.css">
-  <!-- http://erikflowers.github.io/weather-icons/ -->
 </head>
 <body>
 
@@ -27,10 +27,13 @@
     </nav>
 
     <header>
-      <div class="current-date text-monospace">22/12/18</div>
+      <div class="current-date text-monospace">
+        <p id="coord-lat"></p>
+        <p id="coord-long"></p>
+      </div>
       <div class="current-city">
-        <h5>Kyiv</h5>
-        <p>latitude + longitude</p>
+        <h5 id="town"></h5>
+        <p id="date"></p>
       </div>
       <div class="gradus-picker">
         <div class="onoffswitch">
@@ -43,26 +46,34 @@
       </div>
     </header>
     <div class="current-data">
-      <div class="wind">Wind:</div>
-      <div class="humidity">Humidity: </div>
-      <div class="dew-pt">Dew Pt: </div>
-      <div class="uv-index">UV Index: </div>
-      <div class="visibility">Visibility: </div>
-      <div class="pressure">Pressure: </div>
+      <p>Wind:<span class="wind"></span></p>
+      <p>Humidity:<span class="humidity"></span></p>
+      <p>Visibility: <span class="visibility"></span></p>
+      <p>Pressure:<span class="pressure"></span></p>
     </div>
 
     <div class="container daily-weather">
+      <div class="logo-block-text">
+        <h4>Today's weather</h4>
+      </div>
       <div class="logo-block">
-        <div class="logo"></div>
+        <img class="logo">
         <div>
           <div class="temperature"></div>
           <div class="text-content"></div>
         </div>
       </div>
+        <div class="sun-time">
+          <p>sunrise: <span class="sunrise"></span></p>
+          <p>sunset: <span class="sunset"></span></p>
+        </div>
     </div>
 
-    <div class="container weekly-weather">
+    <div class="weekly-weather">
+      <div class="ww-text"><h4>Weather for a week</h4></div>
+      <div class="cards">
 
+      </div>
     </div>
 
   <script src="storage.js"></script>

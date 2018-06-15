@@ -9,12 +9,13 @@
 const ui = new UI;
 
 document.getElementById('add-town-form').addEventListener('submit', (e) => {
-  console.log(document.getElementById('add-town').value)
+  callNewCity(document.getElementById('add-town').value)
   e.preventDefault()
-  
+  document.getElementById('add-town').value = ''
 })
 
 const callNewCity = (city) => {
+  document.querySelector('.cards').innerHTML = ''
   var scr = document.createElement('script')
   scr.src = `https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')&format=json&callback=callbackFunction`
   document.body.appendChild(scr)
