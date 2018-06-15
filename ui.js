@@ -73,11 +73,3 @@ const formatDate = (date) => {
 
   return day + ' ' + monthNames[monthIndex] + ' ' + year;
 } 
-
-const chooseIcon = (code) => {
-  switch(code) {
-    case(0): 'tornado'
-    break;
-
-  }
-}

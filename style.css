@@ -62,11 +62,49 @@ header > * {
 .current-data p {
   margin-right: 25px;
   margin-left: 25px;
+  font-weight: 600;
+}
+
+.current-data span {
+  font-weight: 300;
+}
+
+.sun-time p {
+  font-weight: 400;
+}
+
+.sun-time span {
+  font-weight: 200;
+}
+
+.current-date p {
+  font-weight: 500;
 }
 
 .logo-block {
   display: flex;
   flex-direction: row;
+}
+
+.logo-block-text {
+  margin-top: 16px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: #B0BEC5;
+  height: 87vh;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
 }
 
 .daily-weather {
@@ -108,10 +146,13 @@ header > * {
   align-items: center;
   justify-content: space-between;
   height: 200px;
-  width: 150px;
+  width: 155px;
   text-align: center;
   margin-left: 20px;
   margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  padding: 5px;
 }
 
 .onoffswitch {
