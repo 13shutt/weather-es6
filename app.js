@@ -24,7 +24,6 @@ const callNewCity = (city) => {
 var callbackFunction = function(data) {
   var allWeather = data.query.results;
   if (allWeather == null) {
-    console.log(allWeather)
     document.querySelector('.main').classList.remove('hide')
     document.querySelector('.main').innerHTML = `
       <div class="error">
@@ -38,5 +37,6 @@ var callbackFunction = function(data) {
     document.querySelector('.main').classList.add('hide')
     ui.paintDayWeather(allWeather)
     ui.paintWeekWeather(allWeather)
+    ui.recent(allWeather)
   }
 };

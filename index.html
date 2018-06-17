@@ -13,6 +13,12 @@
 <body>
   
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div id="content">
+            <button type="button" onclick="getElementById('sidebar').classList.toggle('active')" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                <i class="glyphicon glyphicon-align-left"></i>
+                Toggle Sidebar
+            </button>
+        </div>
       <a class="navbar-brand" href="#">My simple WeatherAPP</a>
       <div class="navbar-input" id="navbarNav">
         <div class="input-group input-group-sm mb-3">
@@ -25,6 +31,31 @@
         </div>
       </div>
     </nav>
+
+    <div class="wrapper">
+
+        <nav id="sidebar">
+            <!-- class="active" -->
+          <div class="menu">
+              <div class="sidebar-header">
+                  <h4>Favourites</h4>
+              </div>
+              <div class="fav side-list">
+                <div>town 1</div>
+                <div>town 2</div>
+                <div>town 3</div>
+              </div>
+              <div class="sidebar-header">
+                  <h4>Recent</h4>
+              </div>
+              <div class="recent side-list">
+
+              </div>
+          </div>
+          <div class="other"></div>
+        </nav>
+    
+    </div>
 
     <div class="main"></div>
     

@@ -14,6 +14,7 @@ class UI {
     this.sunset = document.querySelector('.sunset')
     this.weeklyBlock = document.querySelector('.cards')
     this.town = document.querySelector('#town')
+    this.recentCiti = document.querySelector('.recent')
   }
   
   paintDayWeather(weather) {
@@ -56,6 +57,19 @@ class UI {
     this.weeklyBlock.removeChild(this.weeklyBlock.childNodes[1])
     this.weeklyBlock.removeChild(this.weeklyBlock.childNodes[16])
     this.weeklyBlock.removeChild(this.weeklyBlock.childNodes[17])
+  }
+
+  recent(weather) {
+    var recArr = [weather.channel.location.city]
+    recArr.forEach(item => {
+      this.recentCiti.innerHTML += `
+        <div onclick='callNewCity("${item}")'>${item}</div>
+      `
+    })
+    if (this.recentCiti.childElementCount == 4) {
+      this.recentCiti.removeChild(this.recentCiti.childNodes[1])
+    }
+    console.log(this.recentCiti.childNodes[1])
   }
 }
 
