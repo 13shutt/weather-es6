@@ -8,17 +8,18 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div id="content">
-            <button type="button" onclick="getElementById('sidebar').classList.toggle('active')" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                <i class="glyphicon glyphicon-align-left"></i>
-                Toggle Sidebar
-            </button>
-        </div>
+      <div id="content">
+          <button type="button" onclick="getElementById('sidebar').classList.toggle('active')" id="sidebarCollapse" class="btn btn-info navbar-btn">
+            <i class="glyphicon glyphicon-align-left"></i>
+            Toggle Sidebar
+          </button>
+      </div>
       <a class="navbar-brand" href="#">My simple WeatherAPP</a>
       <div class="navbar-input" id="navbarNav">
         <div class="input-group input-group-sm mb-3">
@@ -33,28 +34,19 @@
     </nav>
 
     <div class="wrapper">
-
-        <nav id="sidebar">
-            <!-- class="active" -->
-          <div class="menu">
-              <div class="sidebar-header">
-                  <h4>Favourites</h4>
-              </div>
-              <div class="fav side-list">
-                <div>town 1</div>
-                <div>town 2</div>
-                <div>town 3</div>
-              </div>
-              <div class="sidebar-header">
-                  <h4>Recent</h4>
-              </div>
-              <div class="recent side-list">
-
-              </div>
+      <nav id="sidebar" class="active">
+        <div class="menu">
+          <div class="sidebar-header">
+              <h4>Favourites</h4>
           </div>
-          <div class="other"></div>
-        </nav>
-    
+          <div class="fav side-list"></div>
+          <div class="sidebar-header">
+              <h4>Recent</h4>
+          </div>
+          <div class="recent side-list"></div>
+        </div>
+        <div class="other"></div>
+      </nav>
     </div>
 
     <div class="main"></div>
@@ -66,9 +58,12 @@
       </div>
       <div class="current-city">
         <h5 id="town"></h5>
-        <p id="date"></p>
+        <div class="star-town">
+          <p id="date"></p>
+          <i class="far fa-star" id="toggle-star"></i>
+        </div>
       </div>
-      <div class="gradus-picker">
+      <div class="gradus-picker" onclick="alarm()">
         <div class="onoffswitch">
           <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
           <label class="onoffswitch-label" for="myonoffswitch">
@@ -78,6 +73,7 @@
         </div>
       </div>
     </header>
+
     <div class="current-data">
       <p>Wind:<span class="wind"></span></p>
       <p>Humidity:<span class="humidity"></span></p>
@@ -96,18 +92,17 @@
           <div class="text-content"></div>
         </div>
       </div>
-        <div class="sun-time">
-          <p>sunrise: <span class="sunrise"></span></p>
-          <p>sunset: <span class="sunset"></span></p>
-        </div>
+      <div class="sun-time">
+        <p>sunrise: <span class="sunrise"></span></p>
+        <p>sunset: <span class="sunset"></span></p>
+      </div>
     </div>
 
     <div class="weekly-weather">
       <div class="ww-text"><h4>Weather for a week</h4></div>
-      <div class="cards">
-
-      </div>
+      <div class="cards"></div>
     </div>
+
   <script src="storage.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>

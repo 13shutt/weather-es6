@@ -18,7 +18,6 @@ class UI {
   }
   
   paintDayWeather(weather) {
-    console.log(weather)
     var src = weather.channel.item.description
     this.town.textContent = weather.channel.location.city
     this.wind.textContent = ' ' + weather.channel.wind.speed + ' ' + weather.channel.units.speed
@@ -36,7 +35,6 @@ class UI {
   }
 
   paintWeekWeather(weather) {
-    console.log(weather.channel.item.forecast)
     weather.channel.item.forecast.forEach(item => {
       this.weeklyBlock.innerHTML += `
         <div class="card">
@@ -69,7 +67,6 @@ class UI {
     if (this.recentCiti.childElementCount == 4) {
       this.recentCiti.removeChild(this.recentCiti.childNodes[1])
     }
-    console.log(this.recentCiti.childNodes[1])
   }
 }
 

@@ -132,6 +132,21 @@ header > * {
   position: absolute;
 }
 
+.star-town {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.star-town > .fa-star {
+  position: absolute;
+  left: 628px;
+  top: 111px;
+  cursor: pointer;
+  color: gold;
+}
 
 .error {
   display: flex;
